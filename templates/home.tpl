@@ -26,7 +26,7 @@
                Durante la carrera. Y en la línea de meta. Apoyamos a los creadores. Estamos aquí para apoyar a los creadores. Sus vidas. 
                Y cambiar el mundo.
 
-adidas es mucho más que ropa deportiva y ropa de entrenamiento. Nos asociamos con los mejores de la industria para co-crear. 
+             adidas es mucho más que ropa deportiva y ropa de entrenamiento. Nos asociamos con los mejores de la industria para co-crear. 
 De esta manera, ofrecemos a nuestras seguidores la ropa deportiva y los estilos que mejor se adaptan a sus necesidades deportivas,
  sin dejar de lado la sostenibilidad. Apoyamos a los creadores Mejorar su juego. Creamos el cambio. Y pensamos en el impacto que 
  tenemos en nuestro mundo.

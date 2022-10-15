@@ -57,8 +57,6 @@ function addZapatilla(){
     $precio = $_POST['Precio'];
     $stock = $_POST['Stock'];
     $id_marca=$_POST['select_marca'];
-    
-
     $this->model->insertZapatilla($modelo,$precio,$stock,$id_marca,);
     $this->view->showTablaLocation();
 }

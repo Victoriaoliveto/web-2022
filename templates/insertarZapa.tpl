@@ -15,8 +15,7 @@
             <input class="Stock" name="Stock" type="text" placeholder="Stock/a">
         </div>
 
-      ///  <form action="addImagen" method="POST" enctype="multipart/form-data">
-
+  <form action="addImagen" method="POST" enctype="multipart/form-data">
         <input type="file" name="input_name" id="imageToUpload">
     
         </form>
