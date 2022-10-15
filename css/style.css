@@ -1,0 +1,23 @@
+
+
+body {
+  background-image: url(./imagenes/Captura2.png);
+  background-size: 100%;
+  background-color: rgb(255, 136, 0);
+  opacity: 90%;
+}
+p {
+
+text-align: justify;
+
+}
+.zapatilla{
+
+background-color: rgb(255, 136, 0);
+}
+    h4{
+
+      text-align-last: inherit;
+
+    }
+  
