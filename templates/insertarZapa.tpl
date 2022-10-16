@@ -12,14 +12,9 @@
         </div>
         <label>Stock/a</label>
         <div class="respuesta">
-            <input class="Stock" name="Stock" type="text" placeholder="Stock/a">
+            <input class="Stock" name="Stock" type="text" placeholder="Stock">
         </div>
 
-  <form action="addImagen" method="POST" enctype="multipart/form-data">
-        <input type="file" name="input_name" id="imageToUpload">
-    
-        </form>
-        
         <label>Marca</label>
         <div class="respuesta">
             <select name="select_marca">';
@@ -28,6 +23,12 @@
                 {/foreach}
             </select>
         </div>
+        <div class="tabla_inputs">       
+  <form action="addImagen" method="POST" enctype="multipart/form-data">
+  <input type="file" name="input_name" id="imageToUpload">
+
+  </form>
+  
         <div>
          
    <button type="submit" class="btn btn-light">Agregar</button>

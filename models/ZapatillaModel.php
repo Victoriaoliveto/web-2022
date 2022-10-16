@@ -10,7 +10,7 @@ class ZapatillaModel {
 
   
     public function getAllZapatilla() {
-       $query = $this->db->prepare( "SELECT * FROM zapatilla
+       $query = $this->db->prepare("SELECT * FROM zapatilla
        INNER JOIN marca ON zapatilla.id_marca=marca.id_marca" );
         $query->execute();
         // 3. obtengo los resultados
@@ -35,7 +35,7 @@ class ZapatillaModel {
     
     public function insertZapatilla($modelo, $precio, $stock, $id_marca) {
         $query = $this->db->prepare("INSERT INTO zapatilla (Modelo, 
-            Precio, Stock, id_marca) VALUES(?, ?, ?, ?");
+             Precio, Stock, id_marca) VALUES(?, ?, ?, ?)");
             $query->execute(array($modelo,$precio,$stock, $id_marca));
               return $this->db->lastInsertId();
     }
@@ -65,5 +65,5 @@ class ZapatillaModel {
         $query = $this->db->prepare("UPDATE zapatilla SET imagen=? WHERE id_zapatilla=?");
         $query->execute(array($pathImg, $id));
     }
- 
     }
+    

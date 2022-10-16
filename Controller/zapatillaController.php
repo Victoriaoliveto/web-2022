@@ -57,7 +57,7 @@ function addZapatilla(){
     $precio = $_POST['Precio'];
     $stock = $_POST['Stock'];
     $id_marca=$_POST['select_marca'];
-    $this->model->insertZapatilla($modelo,$precio,$stock,$id_marca,);
+    $this->model->insertZapatilla($modelo,$precio,$stock,$id_marca);
     $this->view->showTablaLocation();
 }
 function addImage($id){
@@ -104,7 +104,7 @@ function addImage($id){
 
 
 function FormularioEditarZapatilla ($id){
-    $this->logHelper->checkLoggedIn();
+ $this->logHelper->checkLoggedIn();
 $datosZapatillas=$this->model->getZapatillaID($id);
 $marcas=$this->marcaModel->getMarcas();
 $this->view->showFormularioEditarZapatilla($marcas, $datosZapatillas);
