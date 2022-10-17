@@ -36,5 +36,5 @@
         </div>
 
 </form>   
-
+<link rel="stylesheet" href="css/style.css">
 {include file="footer.tpl"}

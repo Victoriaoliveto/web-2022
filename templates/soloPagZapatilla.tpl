@@ -1,19 +1,25 @@
 {include file="header.tpl"}
 
+
+
 <div class="zapatilla">
-    <h2 class="zapatilla">{$zapatilla->Modelo}</h2>
-    <h2>Modelo</h2>
-    <p>{$zapatilla->Modelo}</p>
-    <h2>Precio</h2>
-    <p>{$zapatilla->Precio}</p>
-    <h2>Stock</h2>
-    <p>{$zapatilla->Stock}</p>
-    <h2>Marca</h2>
-    <p>{$zapatilla->Nombre}</p>
-    <h2>Descripcion</h2>
-    <p>{$zapatilla->Descripcion}</p>
-    <h2>Imagen</h2>
-    <p>{$zapatilla->imagen}</p>
+
+<section class="especificacionZapatilla">
+    <ul class="list-group list-group-flush font-weight-bold">
+        <li class="list-group-item">Modelo: {$zapatilla->Modelo}</li>
+        <li class="list-group-item">Precio: {$zapatilla->Precio}</li>
+        <li class="list-group-item">Stock: {$zapatilla->Stock}</li>
+        <li class="list-group-item">Marca: {$zapatilla->Nombre}</li>
+        <li class="list-group-item">Descripcion: {$zapatilla->Descripcion}</li>
+        {if $zapatilla->imagen!==null}
+            <li class="list-group-item"><img src="{$zapatilla->imagen}"></li>           
+        {/if}
+    </ul>
+</section>
+
+   
+    
     <a type="button" class="btn btn-light" href="{BASE_URL}tabla">Volver</a>
 </div>
+
 {include file="footer.tpl"}

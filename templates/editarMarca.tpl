@@ -3,7 +3,6 @@
 <form action="{BASE_URL}editarMarca/{$datosMarca->id_marca}" method="POST" >
     <div class="tabla_inputs">
         <div class="form-group">
-        
             <input class="form-control" name="editar_Nombre_input" id="exampleInputEmail1" aria-describedby="emailHelp" type="text"
              value="{$datosMarca->Nombre}" placeholder="Editar Marca">
         </div>

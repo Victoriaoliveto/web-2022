@@ -40,8 +40,8 @@ class ZapatillaModel {
         }
         $query = $this->db->prepare("INSERT INTO zapatilla (Modelo, 
              Precio, Stock, id_marca, imagen) VALUES(?, ?, ?, ?, ?)");
-            $query->execute(array($modelo,$precio,$stock, $id_marca, $pathImg));
-              return $this->db->lastInsertId();
+            return $query->execute(array($modelo,$precio,$stock, $id_marca, $pathImg));
+               
     }
        //INSERTAR IMAGEN AL PROYECTO
        private function uploadImage($imagen){
