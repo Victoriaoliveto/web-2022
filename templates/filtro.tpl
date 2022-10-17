@@ -1,11 +1,11 @@
 <aside>
 
-        <p>DISFRUTÁ DE TU ZONA DE CONFORT
-Corré con un retorno de energía increíble en cada paso...</p>
+        <h2>DISFRUTÁ DE TU ZONA DE CONFORT
+Corré con un retorno de energía increíble en cada paso...</h2>
 
-       <P>Filtrar por marca:</p>
+       <h2>Filtrar por marca:</h2>
         <form action="homeFilter" method="POST">
-            <select name="select_marca">
+            <select name="select_marca"  class="custom-select" id="inputGroupSelect01">
                 {foreach from=$marcas item=marca};
 
                 <option value="{$marca->id_marca}">{$marca->Nombre}</option>

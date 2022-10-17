@@ -48,4 +48,3 @@
     </header>
 </body>
 
-    <main class="container">

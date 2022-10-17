@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+
 
 <form action="{BASE_URL}editarMarca/{$datosMarca->id_marca}" method="POST" >
     <div class="tabla_inputs">

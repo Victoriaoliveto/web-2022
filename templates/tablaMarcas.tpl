@@ -1,7 +1,8 @@
 
 <!-- lista de marcas -->
 <ul class="list-group">
-<p>Marcas</p>
+<h1>¿Cuales son tus zapatilla ideales para correr?</h1>
+<h2>Marcas</h2>
     {foreach from=$marcas item=$marca}
         <li class='list-group-item d-flex justify-content-between align-items-cent'>
             <span> <b>{$marca->Nombre}</b> </span>

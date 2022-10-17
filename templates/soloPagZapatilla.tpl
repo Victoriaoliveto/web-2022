@@ -1,6 +1,5 @@
+
 {include file="header.tpl"}
-
-
 
 <div class="zapatilla">
 
@@ -21,5 +20,6 @@
     
     <a type="button" class="btn btn-light" href="{BASE_URL}tabla">Volver</a>
 </div>
+
 
 {include file="footer.tpl"}
