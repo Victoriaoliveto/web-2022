@@ -38,7 +38,7 @@ class ZapatillaController {
         $this->view->showMasZapatilla($datosZapatilla);
     }
 
- //Ver Productos por Filtro
+ //Ver zapatillas por Filtro
         function showZapatillaFilter($id){
             session_start();
         $id=$_POST['select_marca'];

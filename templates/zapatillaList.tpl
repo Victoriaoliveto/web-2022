@@ -1,14 +1,15 @@
 {include file="header.tpl"}
 
  {include file="filtro.tpl"}
-<!-- lista de tareas -->
+
 <ul class="list-group">
     {foreach from=$zapatillas item=$zapatilla}
         <li class='
                 list-group-item d-flex justify-content-between align-items-center'>
                
             <span> <b>MODELO</b>-<b>{$zapatilla->Modelo}</b> - <b>PRECIO</b> {$zapatilla->Precio|truncate:25}
-              <b>STOCK</b>-{$zapatilla->Stock} <a>uniddaes</a></span>
+              <b>STOCK</b>-{$zapatilla->Stock} <a>unidades</a></span>
+              
             <div class="ml-auto">
                   <a href='{BASE_URL}verMasZapas/{$zapatilla->id_}' type='button' class='btn btn-danger'>Ver Mas Informacion</a> 
              {if isset($smarty.session.USER_EMAIL)}

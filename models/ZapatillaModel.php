@@ -19,7 +19,7 @@ class ZapatillaModel {
         return $zapas;
     }
 
-    function getZapatillasFilter  ($id_filtro){
+   public  function getZapatillasFilter  ($id_filtro){
         $query = $this->db->prepare( "SELECT zapatilla.*,
         marca.Nombre as marca from zapatilla join 
          on zapatilla.id_marca= marcas.id_marca where 
@@ -29,11 +29,9 @@ class ZapatillaModel {
         return $zapatillas;
     }
 
-   
-
 
     
-    public function insertZapatilla($modelo, $precio, $stock, $id_marca,$imagen = null) {
+    public function insertZapatilla($modelo, $precio, $stock, $id_marca,$imagen=null) {
         $pathImg = null;
         if ($imagen!==null){
             $pathImg = $this->uploadImage($imagen);
@@ -49,31 +47,27 @@ class ZapatillaModel {
         move_uploaded_file($imagen, $final_path);
         return $final_path;
     }
-    function getZapatillaID($id_zapatilla){
+    public   function getZapatillaID($id_zapatilla){
         $query = $this->db->prepare("SELECT * FROM zapatilla INNER JOIN marca ON zapatilla.id_marca=marca.id_marca WHERE id_=?");
         $query->execute(array($id_zapatilla));
         return $query->fetch(PDO::FETCH_OBJ);
      
     }
-    function deleteZapatillaById($id) {
+    public   function deleteZapatillaById($id) {
         $query = $this->db->prepare("DELETE FROM zapatilla WHERE id_ = ?");
         $query->execute([$id]);
     }
   
   
-    function updateZapatilla($modelo,$precio,$stock,$id){
+    public  function updateZapatilla($modelo,$precio,$stock,$id){
         $sentencia=$this->db->prepare("UPDATE zapatilla SET Modelo=?, Precio=?, Stock=? WHERE id_=?");
         $sentencia->execute(array($modelo, $precio, $stock,$id));
     }
-    function getZapatillasPorMarca($id){
+    public  function getZapatillasPorMarca($id){
         $sentencia = $this->db->prepare("SELECT * FROM zapatilla INNER JOIN marca ON zapatilla.id_marca=marca.id_marca WHERE zapatilla.id_marca=?");
         $sentencia->execute(array($id));
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
-    }
-    function addImage($img, $id){
-        $pathImg = $this->uploadImage($img);
-        $query = $this->db->prepare("UPDATE zapatilla SET imagen=? WHERE id_zapatilla=?");
-        $query->execute(array($pathImg, $id));
+    
     }
     }
     
