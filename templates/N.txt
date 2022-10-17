@@ -89,4 +89,6 @@ N{include file="header.tpl"}
         $this->smarty->assign('logeado',$logeado);
         $this->smarty->assign('mensaje', $mensaje);
         $this->smarty->display('./templates/error.tpl');
-    }
+    }        <div class="tabla_inputs">       
+  <form action="addImagen" method="POST" enctype="multipart/form-data">
+  <input type="file" name="input_name" id="imageToUpload">

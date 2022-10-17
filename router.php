@@ -37,9 +37,9 @@ switch ($params[0]) {
     case 'formularioZapa':
           $zapatillaController->formularioZapa();
          break;
-    case 'addImagen': 
-            $zapatillaController->addImage($params[1]); 
-            break;   
+   // case 'addImagen': 
+      //      $zapatillaController->addImagen($params[1]); 
+      //      break;   
     case 'formularioEditarZapatilla':
             $id= $params[1];
             $zapatillaController->FormularioEditarZapatilla($id);

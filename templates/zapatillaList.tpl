@@ -19,15 +19,12 @@
 
                                   {/if}
                    
-            </div>
-              
+            </div>          
 
         </li>
     {/foreach}
 
-
     </ul>
-
 
 </ul>
 {include file="tablaMarcas.tpl"}
@@ -35,8 +32,7 @@
         <aside>
         {if isset($smarty.session.USER_EMAIL)}
                <form action="{BASE_URL}formularioZapa" method="GET">
-                <button type="submit" class="btn btn-light">Insertar zapatilla</button>
-         
+                <button type="submit" class="btn btn-light">Insertar zapatilla</button>     
            
             </form>
             <form action="{BASE_URL}formularioInsertarMarca" method="GET">

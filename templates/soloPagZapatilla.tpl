@@ -12,6 +12,8 @@
     <p>{$zapatilla->Nombre}</p>
     <h2>Descripcion</h2>
     <p>{$zapatilla->Descripcion}</p>
+    <h2>Imagen</h2>
+    <p>{$zapatilla->imagen}</p>
     <a type="button" class="btn btn-light" href="{BASE_URL}tabla">Volver</a>
 </div>
 {include file="footer.tpl"}

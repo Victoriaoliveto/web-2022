@@ -33,11 +33,21 @@ class ZapatillaModel {
 
 
     
-    public function insertZapatilla($modelo, $precio, $stock, $id_marca) {
+    public function insertZapatilla($modelo, $precio, $stock, $id_marca,$imagen = null) {
+        $pathImg = null;
+        if ($imagen!==null){
+            $pathImg = $this->uploadImage($imagen);
+        }
         $query = $this->db->prepare("INSERT INTO zapatilla (Modelo, 
-             Precio, Stock, id_marca) VALUES(?, ?, ?, ?)");
-            $query->execute(array($modelo,$precio,$stock, $id_marca));
+             Precio, Stock, id_marca, imagen) VALUES(?, ?, ?, ?, ?)");
+            $query->execute(array($modelo,$precio,$stock, $id_marca, $pathImg));
               return $this->db->lastInsertId();
+    }
+       //INSERTAR IMAGEN AL PROYECTO
+       private function uploadImage($imagen){
+        $final_path = './images/'.uniqid().'.jpg';
+        move_uploaded_file($imagen, $final_path);
+        return $final_path;
     }
     function getZapatillaID($id_zapatilla){
         $query = $this->db->prepare("SELECT * FROM zapatilla INNER JOIN marca ON zapatilla.id_marca=marca.id_marca WHERE id_=?");

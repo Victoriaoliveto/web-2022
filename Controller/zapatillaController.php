@@ -57,22 +57,33 @@ function addZapatilla(){
     $precio = $_POST['Precio'];
     $stock = $_POST['Stock'];
     $id_marca=$_POST['select_marca'];
-    $this->model->insertZapatilla($modelo,$precio,$stock,$id_marca);
-    $this->view->showTablaLocation();
-}
-function addImage($id){
-    if ($this->logHelper->checkAdminLogIn()) {
-        if($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" || $_FILES['input_name']['type'] == "image/png" ) {
-            $this->model->addImage($_FILES['input_name']['tmp_name'], $id);
-        }
-    }
-    $this->view->showTablaLocation();
 
+    if($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" ||  $_FILES['input_name']['type'] == "image/png"){
+    $this->model->insertZapatilla($modelo,$precio,$stock,$id_marca, $_FILES['input_name']['tmp_name']);
+    
 }
+else {
+$this->model->insertZapatilla($modelo,$precio,$stock,$id_marca, $_FILES['input_name']['tmp_name']);
+}
+header("Location: ".BASE_URL."tabla");
+}
+
+
+  // function addImagen($id){
+  //  if ($this->logHelper->checkLoggedIn()) {
+  //      if($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" 
+  //      || $_FILES['input_name']['type'] == "image/png" ) {
+  //          $this->model->addImage($_FILES['input_name']['tmp_name'], $id);
+  //      }
+  //  }
+  //  $this->view->showTablaLocation();
+
+
 
        function  formularioZapa (){
         $this->logHelper->checkLoggedIn();
         $marca=$this->marcaModel ->getMarcas();
+
         $this->view->showFormularioInsertar($marca);
     }
 
@@ -110,6 +121,6 @@ $marcas=$this->marcaModel->getMarcas();
 $this->view->showFormularioEditarZapatilla($marcas, $datosZapatillas);
 }
 
-}
 
+}
 
